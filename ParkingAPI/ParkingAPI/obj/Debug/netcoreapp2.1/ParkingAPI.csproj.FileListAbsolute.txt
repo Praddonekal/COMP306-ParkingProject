@@ -1,0 +1,17 @@
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\ParkingAPI.deps.json
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\ParkingAPI.runtimeconfig.json
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\ParkingAPI.runtimeconfig.dev.json
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\ParkingAPI.dll
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\bin\Debug\netcoreapp2.1\ParkingAPI.pdb
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.csprojAssemblyReference.cache
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.AssemblyInfoInputs.cache
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.AssemblyInfo.cs
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.csproj.CoreCompileInputs.cache
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.RazorAssemblyInfo.cache
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.RazorAssemblyInfo.cs
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.dll
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.pdb
+C:\Users\Pradyumna\source\repos\ParkingAPI\ParkingAPI\obj\Debug\netcoreapp2.1\ParkingAPI.genruntimeconfig.cache
