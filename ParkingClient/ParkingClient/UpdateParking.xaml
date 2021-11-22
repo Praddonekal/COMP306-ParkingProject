@@ -1,0 +1,23 @@
+﻿<Window x:Class="ParkingClient.UpdateParking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParkingClient"
+        mc:Ignorable="d"
+        Title="UpdateParking" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="textLotID" HorizontalAlignment="Left" Height="34" Margin="303,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textCity" HorizontalAlignment="Left" Height="34" Margin="303,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textName" HorizontalAlignment="Left" Height="31" Margin="303,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textStreetName" HorizontalAlignment="Left" Height="28" Margin="303,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="136,42,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="136,99,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="136,151,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Street Name:" HorizontalAlignment="Left" Margin="136,204,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="136,281,0,0" VerticalAlignment="Top" Width="93" Click="btnSubmit_Click" FontWeight="Bold" FontSize="18" Height="37" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Foreground="White"/>
+        <Button x:Name="btnCancle" Content="Cancle" HorizontalAlignment="Left" Margin="313,281,0,0" VerticalAlignment="Top" Width="101" Height="37" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Foreground="White" FontWeight="Bold" FontSize="18" Click="btnCancle_Click"/>
+
+
+    </Grid>
+</Window>
