@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pradyumna\\source\\repos\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj": {}
+    "D:\\APIProject\\COMP306-ParkingProject\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pradyumna\\source\\repos\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj": {
+    "D:\\APIProject\\COMP306-ParkingProject\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pradyumna\\source\\repos\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj",
+        "projectUniqueName": "D:\\APIProject\\COMP306-ParkingProject\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj",
         "projectName": "ParkingAPI",
-        "projectPath": "C:\\Users\\Pradyumna\\source\\repos\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj",
+        "projectPath": "D:\\APIProject\\COMP306-ParkingProject\\ParkingAPI\\ParkingAPI\\ParkingAPI.csproj",
         "packagesPath": "C:\\Users\\Pradyumna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pradyumna\\source\\repos\\ParkingAPI\\ParkingAPI\\obj\\",
+        "outputPath": "D:\\APIProject\\COMP306-ParkingProject\\ParkingAPI\\ParkingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pradyumna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",

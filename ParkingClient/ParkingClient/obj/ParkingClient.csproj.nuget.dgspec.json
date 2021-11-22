@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pradyumna\\source\\repos\\ParkingClient\\ParkingClient\\ParkingClient.csproj": {}
+    "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\ParkingClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pradyumna\\source\\repos\\ParkingClient\\ParkingClient\\ParkingClient.csproj": {
+    "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\ParkingClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pradyumna\\source\\repos\\ParkingClient\\ParkingClient\\ParkingClient.csproj",
+        "projectUniqueName": "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\ParkingClient.csproj",
         "projectName": "ParkingClient",
-        "projectPath": "C:\\Users\\Pradyumna\\source\\repos\\ParkingClient\\ParkingClient\\ParkingClient.csproj",
+        "projectPath": "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\ParkingClient.csproj",
         "packagesPath": "C:\\Users\\Pradyumna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pradyumna\\source\\repos\\ParkingClient\\ParkingClient\\obj\\",
+        "outputPath": "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pradyumna\\AppData\\Roaming\\NuGet\\NuGet.Config",

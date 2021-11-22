@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Comp306Project.Models;
+using AutoMapper;
 
 namespace Comp306Project.Controllers
 {
@@ -13,31 +14,30 @@ namespace Comp306Project.Controllers
     [ApiController]
     public class ParkingLotsController : ControllerBase
     {
-        private readonly ParkAPIContext _context;
+        private readonly IParkingRepository _parkingRepository;
+        private readonly IMapper _mapper;
 
-        public ParkingLotsController(ParkAPIContext context)
+        public ParkingLotsController(IParkingRepository parkingRepository, IMapper mapper)
         {
-            _context = context;
+            _parkingRepository = parkingRepository;
+            _mapper = mapper;
 
         }
 
         // GET: api/ParkingLots
         [HttpGet]
-        public IEnumerable<ParkingLots> GetParkingLots()
+        public ActionResult<IEnumerable<ParkingLots>> GetParkingLots()
         {
-            return _context.ParkingLots;
+            var parkingLots = _parkingRepository.GetParkingLots();
+            var parkingViewModel = _mapper.Map<IEnumerable<ParkingLots>>(parkingLots);
+            return Ok(parkingViewModel);
         }
 
         // GET: api/ParkingLots/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetParkingLots([FromRoute] string id)
+        public  IActionResult GetParkingLot(string id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var parkingLots = await _context.ParkingLots.FindAsync(id);
+            var parkingLots = _parkingRepository.GetParkingLots(id);
 
             if (parkingLots == null)
             {
@@ -49,92 +49,25 @@ namespace Comp306Project.Controllers
 
         // PUT: api/ParkingLots/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutParkingLots([FromRoute] string id, [FromBody] ParkingLots parkingLots)
+        public IActionResult PutParkingLots (string id, ParkingLots parkingLots)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            return Ok(_parkingRepository.Edit(id, parkingLots));
 
-            if (id != parkingLots.LotId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(parkingLots).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ParkingLotsExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/ParkingLots
         [HttpPost]
-        public async Task<IActionResult> PostParkingLots([FromBody] ParkingLots parkingLots)
+        public IActionResult PostParkingLots(ParkingLots parkingLots)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            _context.ParkingLots.Add(parkingLots);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (ParkingLotsExists(parkingLots.LotId))
-                {
-                    return new StatusCodeResult(StatusCodes.Status409Conflict);
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtAction("GetParkingLots", new { id = parkingLots.LotId }, parkingLots);
+            return Ok(_parkingRepository.Add(parkingLots));
         }
 
         // DELETE: api/ParkingLots/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteParkingLots([FromRoute] string id)
+        public IActionResult DeleteParkingLots(string id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var parkingLots = await _context.ParkingLots.FindAsync(id);
-            if (parkingLots == null)
-            {
-                return NotFound();
-            }
-
-            _context.ParkingLots.Remove(parkingLots);
-            await _context.SaveChangesAsync();
-
-            return Ok(parkingLots);
+            return Ok(_parkingRepository.Delete(id));
         }
 
-        private bool ParkingLotsExists(string id)
-        {
-            return _context.ParkingLots.Any(e => e.LotId == id);
-        }
     }
 }

@@ -93,7 +93,7 @@ namespace ParkingClient {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ParkingClient;component/postparking.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ParkingClient;V1.0.0.0;component/postparking.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PostParking.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

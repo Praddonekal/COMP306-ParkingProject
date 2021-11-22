@@ -13,6 +13,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Comp306Project.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using AutoMapper;
+
 
 namespace Comp306Project
 {
@@ -32,6 +34,15 @@ namespace Comp306Project
             services.AddDbContext<ParkAPIContext>(option=>
             option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDbContext<Models.ParkAPIContext>();
+            services.AddScoped<IParkingRepository, SqlParkingRepository>();
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapping());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "ParkHere", Version = "v1" });
