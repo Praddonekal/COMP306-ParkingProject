@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Comp306Project.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using AutoMapper;
-
+using System.Data.SqlClient;
 
 namespace Comp306Project
 {
@@ -31,8 +31,12 @@ namespace Comp306Project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("DefaultConnection"));
+            builder.UserID = Configuration["DbUser"];
+            builder.Password = Configuration["DbPassword"];
+            var connection = builder.ConnectionString;
             services.AddDbContext<ParkAPIContext>(option=>
-            option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            option.UseSqlServer(connection));
 
             services.AddDbContext<Models.ParkAPIContext>();
             services.AddScoped<IParkingRepository, SqlParkingRepository>();
@@ -47,6 +51,7 @@ namespace Comp306Project
             {
                 c.SwaggerDoc("v1", new Info { Title = "ParkHere", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,16 @@
+version: '2'
+services:
+  webapp:
+    image: 
+    ports:
+      - "8081:8091"
+    command: bash -c "dotnet ParkingAPI.dll"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://0.0.0.0:8091
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "udp://logs6.papertrailapp.com:"

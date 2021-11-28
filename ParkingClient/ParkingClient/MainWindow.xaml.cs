@@ -26,7 +26,7 @@ namespace ParkingClient
 
         public MainWindow()
         {
-            client.BaseAddress = new Uri("https://localhost:44370");
+            client.BaseAddress = new Uri("http://loadbalancer-245950494.us-east-1.elb.amazonaws.com");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             InitializeComponent();

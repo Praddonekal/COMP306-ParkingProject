@@ -1,0 +1,20 @@
+version: '2'
+services:
+  aps_net:
+    image: mcr.microsoft.com/dotnet/aspnet:2.1
+    tty: true
+    working_dir: /App/
+    command: bash -c "dotnet ParkingAPI.dll"
+    volumes:
+      - ./bin/Release/netcoreapp2.1/publish/:/App/
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ASPNETCORE_DETAILEDERRORS=1
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+    ports:
+      - "8091:80"
+    expose:
+      - "8091"

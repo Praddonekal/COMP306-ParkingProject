@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "50KKaEK/BhyYJuXYt1eLR7dSxAFlS50M7eMqLwNHSXJDBVlsg+5UT1BSEX6vIZuUkueD58yzpkHY0kloVZ2C/g==",
+  "dgSpecHash": "gn3a3byIM8E+fjo3lAqjBW6rIIY1CV0DpLdl/iu5F6XmKxDqi3nyeO1xQOHKIIqcHkcSGV+SbJgi6RvJbjsWTw==",
   "success": true,
   "projectFilePath": "D:\\APIProject\\COMP306-ParkingProject\\ParkingClient\\ParkingClient\\ParkingClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Pradyumna\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\Pradyumna\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Pradyumna\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
   ],
   "logs": []
 }
