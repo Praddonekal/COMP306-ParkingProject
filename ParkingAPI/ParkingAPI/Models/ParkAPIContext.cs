@@ -23,7 +23,7 @@ namespace Comp306Project.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=MSI\\SQLEXPRESS;Database=sampletest;Trusted_Connection=True;MultipleActiveResultSets=true");
+                optionsBuilder.UseSqlServer("Server=parking.c2yicpzrj1p1.us-east-1.rds.amazonaws.com;Database=sampletest;");
             }
         }
 

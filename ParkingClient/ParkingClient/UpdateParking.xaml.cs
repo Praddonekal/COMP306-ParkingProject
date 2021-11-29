@@ -38,16 +38,16 @@ namespace ParkingClient
                 newParking.LotCity = textCity.Text;
                 newParking.LotName = textName.Text;
                 newParking.LotStreetName = textStreetName.Text;
-                newParking.LotId = textLotID.Text;
 
-                newParking.LotStreetNumber = 000;
-                newParking.LotDailyRate = 49;
-                newParking.LotHourlyRate = 4;
-                newParking.LotWeeklyRate = 20;
-                newParking.LotMonthlyRate = 200;
-                newParking.LotYearlyRate = 1900;
+                newParking.LotId = textLotId.Text;
+                newParking.LotStreetNumber = int.Parse(textLotStreetNo.Text);
+                newParking.LotDailyRate = decimal.Parse(textLotDailyRate.Text);
+                newParking.LotHourlyRate = decimal.Parse(textLotHourlyRate.Text);
+                newParking.LotWeeklyRate = decimal.Parse(textWeeklyRate.Text);
+                newParking.LotMonthlyRate = decimal.Parse(textLotMonthlyRate.Text);
+                newParking.LotYearlyRate = decimal.Parse(textLotYearlyRate.Text);
 
-                if (textLotID.Text == "" || textStreetName.Text == "" || textName.Text == "")
+                if (textLotId.Text == "" || textStreetName.Text == "" || textName.Text == "")
                 {
                     throw new Exception("Please fill all blanks");
                 }

@@ -39,13 +39,13 @@ namespace ParkingClient
                 newParking.LotName = textName.Text;
                 newParking.LotStreetName = textStreetName.Text;
 
-                newParking.LotId = "50007";
-                newParking.LotStreetNumber = 000;
-                newParking.LotDailyRate = 49;
-                newParking.LotHourlyRate = 4;
-                newParking.LotWeeklyRate = 20;
-                newParking.LotMonthlyRate = 200;
-                newParking.LotYearlyRate = 1900;
+                newParking.LotId = textLotId.Text;
+                newParking.LotStreetNumber = int.Parse(textLotStreetNo.Text);
+                newParking.LotDailyRate = decimal.Parse(textLotDailyRate.Text);
+                newParking.LotHourlyRate = decimal.Parse(textLotHourlyRate.Text);
+                newParking.LotWeeklyRate = decimal.Parse(textWeeklyRate.Text);
+                newParking.LotMonthlyRate = decimal.Parse(textLotMonthlyRate.Text);
+                newParking.LotYearlyRate = decimal.Parse(textLotYearlyRate.Text);
 
                 if (textCity.Text == "" || textName.Text == "" || textStreetName.Text == "")
                 {
