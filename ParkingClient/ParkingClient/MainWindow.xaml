@@ -5,16 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParkingClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="840">
+        Title="MainWindow" Height="600" Width="870">
     <Grid>
         <Button x:Name="Btn_get" Content="GET" HorizontalAlignment="Left" Margin="37,296,0,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_get_Click" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
-        <Button x:Name="Btn_post" Content="POST" HorizontalAlignment="Left" Margin="233,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_post_Click" />
-        <Button x:Name="Btn_put" Content="PUT" HorizontalAlignment="Left" Margin="452,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_put_Click" />
-        <Button x:Name="Btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="656,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_delete_Click" RenderTransformOrigin="0.012,0.179" />
-        <DataGrid x:Name="gridDisplayParking" HorizontalAlignment="Left" Height="268" Margin="28,10,0,0" VerticalAlignment="Top" Width="764" />
+        <Button x:Name="Btn_post" Content="POST" HorizontalAlignment="Left" Margin="260,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_post_Click" />
+        <Button x:Name="Btn_put" Content="PUT" HorizontalAlignment="Left" Margin="483,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_put_Click" />
+        <Button x:Name="Btn_delete" Content="DELETE" HorizontalAlignment="Left" Margin="705,296,0,0" VerticalAlignment="Top" Width="116" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_delete_Click" RenderTransformOrigin="0.012,0.179" />
+        <DataGrid x:Name="gridDisplayParking" HorizontalAlignment="Left" Height="268" Margin="20,10,0,0" VerticalAlignment="Top" Width="826" />
         <TextBox x:Name="textLotID" HorizontalAlignment="Left" Height="32" Margin="308,433,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="335"/>
         <Label Content="Parking ID:" HorizontalAlignment="Left" Margin="187,431,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
         <Button x:Name="Btn_getByID" Content="Get Parking Lot by ID" HorizontalAlignment="Left" Margin="352,481,0,0" VerticalAlignment="Top" Width="247" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontWeight="Bold" Height="44" FontSize="18" Foreground="White" Click="Btn_getByID_Click" />
+        <Label Content="Get All Parking Lots" HorizontalAlignment="Left" Margin="37,360,0,0" VerticalAlignment="Top"/>
+        <Label Content="Create a Parking Lot" HorizontalAlignment="Left" Margin="260,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.338,-0.045"/>
+        <Label Content="Update a Parking Lot" HorizontalAlignment="Left" Margin="481,360,0,0" VerticalAlignment="Top"/>
+        <Label Content="Delete a Parking Lot" HorizontalAlignment="Left" Margin="705,360,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
